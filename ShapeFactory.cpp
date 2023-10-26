@@ -13,7 +13,7 @@ Shape &SquareFactory::parse(string prompt)
 
     edge = stof(token);
 
-    Square mySquare = Square::getInstance();
+    Square &mySquare = Square::getInstance();
 
     mySquare.setEdge(edge);
 
