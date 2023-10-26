@@ -2,11 +2,11 @@
 #include "Shape.h"
 #include <sstream>
 
-Shape& SquareFactory::parse(string prompt)
+Shape &SquareFactory::parse(string prompt)
 {
     float edge;
     istringstream iss(prompt);
-    
+
     int index = prompt.find_last_of('=');
 
     string token = prompt.substr(index + 1);
@@ -18,5 +18,4 @@ Shape& SquareFactory::parse(string prompt)
     mySquare.setEdge(edge);
 
     return mySquare;
-
 }
