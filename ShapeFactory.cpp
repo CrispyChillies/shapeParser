@@ -1,21 +1,32 @@
-#include "ShapeFactory.h"
-#include "Shape.h"
 #include <sstream>
 
-Shape &SquareFactory::parse(string prompt)
+#include "ShapeFactory.hpp"
+
+Shape *StringToShapeFactory::parse(string prompt)
 {
-    float edge;
-    istringstream iss(prompt);
+    Shape *product = nullptr;
 
-    int index = prompt.find_last_of('=');
+    // Check if the substring "Square" is in the prompt
+    if (prompt.find("Square") != std::string::npos)
+    {
+        product = &Square::parse(prompt);
+    }
+    // Check if the substring "Circle" is in the prompt
+    else if (prompt.find("Circle") != std::string::npos)
+    {
+        // return Circle::parse(prompt);
+    }
+    // Check if the substring "Rectangle" is in the prompt
+    else if (prompt.find("Rectangle") != std::string::npos)
+    {
+        // return Rectangle::parse(prompt);
+    }
 
-    string token = prompt.substr(index + 1);
+    if (product != nullptr)
+    {
+        ++countProduct;
+        product->setId(countProduct);
+    }
 
-    edge = stof(token);
-
-    Square &mySquare = Square::getInstance();
-
-    mySquare.setEdge(edge);
-
-    return mySquare;
+    return product;
 }
