@@ -66,10 +66,70 @@ public:
     }
 };
 
-// class CircleDisplayer{
+class CircleDisplayer : public ShapeDisplayer
+{
+    public:
+    /***
+     * Singleton
+     */
 
-// };
+    CircleDisplayer() = default;
 
-// class RectanglesquareDisplayer{
+    /// @brief Get the instance of the Circle displayer
+    /// @return the instance of the Circle displayer
+    static CircleDisplayer &getInstance()
+    {
+        static CircleDisplayer instance;
+        return instance;
+    }
 
-// };
+    CircleDisplayer(const CircleDisplayer &) = delete;
+    CircleDisplayer(CircleDisplayer &&) = delete;
+    CircleDisplayer &operator=(const CircleDisplayer &) = delete;
+    CircleDisplayer &operator=(CircleDisplayer &&) = delete;
+
+public:
+    /// @brief Display the square
+    /// @param id is the id of the square
+    /// @param perimeter is the perimeter of the square
+    /// @param area is the area of the square
+    inline void display(int id, float perimeter, float area)
+    {
+        string displayString = getDisplayString(id, "Circle", perimeter, area);
+        cout << displayString << endl;
+    }
+};
+
+class RectDisplayer : public ShapeDisplayer
+{
+     public:
+    /***
+     * Singleton
+     */
+
+    RectDisplayer() = default;
+
+    /// @brief Get the instance of the Rect displayer
+    /// @return the instance of the Rect displayer
+    static RectDisplayer &getInstance()
+    {
+        static RectDisplayer instance;
+        return instance;
+    }
+
+    RectDisplayer(const RectDisplayer &) = delete;
+    RectDisplayer(RectDisplayer &&) = delete;
+    RectDisplayer &operator=(const RectDisplayer &) = delete;
+    RectDisplayer &operator=(RectDisplayer &&) = delete;
+
+public:
+    /// @brief Display the square
+    /// @param id is the id of the square
+    /// @param perimeter is the perimeter of the square
+    /// @param area is the area of the square
+    inline void display(int id, float perimeter, float area)
+    {
+        string displayString = getDisplayString(id, "Rectangle", perimeter, area);
+        cout << displayString << endl;
+    }
+};

@@ -5,7 +5,7 @@ int main()
 {
     // Using TextFileReader to read a prompt
     TextFileReader *textFileReader = &TextFileLineReader::getInstance();
-    string fileName = "../shape.txt";
+    string fileName = "shape.txt";
     textFileReader->setFileName(fileName);
     string prompt = textFileReader->read();
 
