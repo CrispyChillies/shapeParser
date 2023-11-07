@@ -3,6 +3,8 @@
 #include <iostream>
 #include "ShapeDisplayer.hpp"
 
+const float pi = 3.14;
+
 using namespace std;
 class Shape
 {
@@ -39,13 +41,19 @@ public:
     }
 
 public:
+
+    inline Square(int edge)
+    {
+        _edge = edge;
+    }
+
     /***
      * Singleton
      */
 
-    Square() = default;
+   /* Square() = default;
 
-    inline static Square &getInstance(float edge)
+    inline static Square &getInstance(int edge)
     {
         static Square instance;
         instance.setEdge(edge);
@@ -56,7 +64,7 @@ public:
     Square(const Square &) = delete;
     Square(Square &&) = delete;
     Square &operator=(const Square &) = delete;
-    Square &operator=(Square &&) = delete;
+    Square &operator=(Square &&) = delete;*/
 
 public:
     inline float calcPerimeter()
@@ -83,77 +91,16 @@ public:
     }
 
 public:
-    static Square &parse(string prompt);
+    static Square* parse(string prompt);
 };
 
-class Rect : public Shape {
-    private:
-    float _height;
-    float _width;
+// class Rectangle : public Shape {
 
-public:
-    inline void setHeight(float value)
-    {
-        _height = value;
-    }
-    inline void setWidth(float value)
-    {
-        _width = value;
-    }
-
-public:
-    /***
-     * Singleton
-     */
-
-    Rect() = default;
-
-    inline static Rect &getInstance(float width, float height)
-    {
-        static Rect instance;
-        instance.setHeight(height);
-        instance.setWidth(width);
-
-        return instance;
-    }
-
-    Rect(const Rect &) = delete;
-    Rect(Rect &&) = delete;
-    Rect &operator=(const Rect &) = delete;
-    Rect &operator=(Rect &&) = delete;
-
-public:
-    inline float calcPerimeter()
-    {
-        _perimeter = (_width + _height) * 2;
-        return _perimeter;
-    }
-
-    inline float calcArea()
-    {
-        _area = _width * _height;
-        return _area;
-    }
-
-public:
-    inline void setDisplayer()
-    {
-        _shapeDisplayer = &RectDisplayer::getInstance();
-    }
-
-    inline void display()
-    {
-        _shapeDisplayer->display(_id, _perimeter, _area);
-    }
-
-public:
-    static Rect &parse(string prompt);
-};
+// };
 
 class Circle : public Shape {
-    private:
+private:
     float _radius;
-    const float pi = 3.14;
 
 public:
     inline void setRadius(float value)
@@ -168,7 +115,7 @@ public:
 
     Circle() = default;
 
-    inline static Circle &getInstance(float radius)
+    inline static Circle& getInstance(int radius)
     {
         static Circle instance;
         instance.setRadius(radius);
@@ -176,10 +123,10 @@ public:
         return instance;
     }
 
-    Circle(const Circle &) = delete;
-    Circle(Circle &&) = delete;
-    Circle &operator=(const Circle &) = delete;
-    Circle &operator=(Circle &&) = delete;
+    Circle(const Circle&) = delete;
+    Circle(Circle&&) = delete;
+    Circle& operator=(const Circle&) = delete;
+    Circle& operator=(Circle&&) = delete;
 
 public:
     inline float calcPerimeter()
@@ -206,6 +153,69 @@ public:
     }
 
 public:
-    static Circle &parse(string prompt);
+    static Circle& parse(string prompt);
+};
 
+class Rect : public Shape {
+private:
+    float _height;
+    float _width;
+
+public:
+    inline void setHeight(float value)
+    {
+        _height = value;
+    }
+    inline void setWeight(float value)
+    {
+        _width = value;
+    }
+
+public:
+    /***
+     * Singleton
+     */
+
+    Rect() = default;
+
+    inline static Rect& getInstance(float weight, float height)
+    {
+        static Rect instance;
+        instance.setHeight(height);
+        instance.setWeight(weight);
+
+        return instance;
+    }
+
+    Rect(const Rect&) = delete;
+    Rect(Rect&&) = delete;
+    Rect& operator=(const Rect&) = delete;
+    Rect& operator=(Rect&&) = delete;
+
+public:
+    inline float calcPerimeter()
+    {
+        _perimeter = (_width + _height) * 2;
+        return _perimeter;
+    }
+
+    inline float calcArea()
+    {
+        _area = _width * _height;
+        return _area;
+    }
+
+public:
+    inline void setDisplayer()
+    {
+        _shapeDisplayer = &RectDisplayer::getInstance();
+    }
+
+    inline void display()
+    {
+        _shapeDisplayer->display(_id, _perimeter, _area);
+    }
+
+public:
+    static Rect& parse(string prompt);
 };

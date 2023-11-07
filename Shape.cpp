@@ -1,7 +1,7 @@
-#include <algorithm>
 #include "Shape.hpp"
+#include <algorithm>
 
-Square &Square::parse(string prompt)
+Square* Square::parse(string prompt)
 {
     // Sample prompt: Square: a=12
     // Delete all the whitespace characters
@@ -15,13 +15,15 @@ Square &Square::parse(string prompt)
     float edge = stof(edgeString);
 
     // Create a new Square instance
-    Square *square = &Square::getInstance(edge);
+    /*Square *square = &Square::getInstance(edge);*/
+
+    Square *square = new Square(edge);
 
     // Return the Square instance
-    return *square;
+    return square;
 }
 
-Circle &Circle::parse(string prompt)
+Circle& Circle::parse(string prompt)
 {
     prompt.erase(remove_if(prompt.begin(), prompt.end(), ::isspace), prompt.end());
 
@@ -41,11 +43,11 @@ Rect& Rect::parse(string prompt)
 {
     prompt.erase(remove_if(prompt.begin(), prompt.end(), ::isspace), prompt.end());
     int index = prompt.find_first_of('=');
-    string widthString = prompt.substr(index+1);
+    string widthString = prompt.substr(index + 1);
     float w = stof(widthString);
 
     index = prompt.find_last_of('=');
-    string heightString = prompt.substr(index+1);
+    string heightString = prompt.substr(index + 1);
     float h = stof(heightString);
 
     Rect* rect = &Rect::getInstance(w, h);
