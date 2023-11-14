@@ -14,18 +14,12 @@ Shape *StringToShapeFactory::parse(string prompt)
     // Check if the substring "Circle" is in the prompt
     else if (prompt.find("Circle") != std::string::npos)
     {
-        product = &Circle::parse(prompt);
+        product = Circle::parse(prompt);
     }
     // Check if the substring "Rectangle" is in the prompt
     else if (prompt.find("Rectangle") != std::string::npos)
     {
-        product = &Rect::parse(prompt);
-    }
-
-    if (product != nullptr)
-    {
-        ++countProduct;
-        product->setId(countProduct);
+        product = Rectangle::parse(prompt);
     }
 
     return product;

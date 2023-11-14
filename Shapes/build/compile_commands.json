@@ -1,0 +1,38 @@
+[
+{
+  "directory": "/Users/conquerormikrokosmos/Downloads/LAPTOP MAC/IT/C++ PROJECT/shapeParser/Shapes/build",
+  "command": "/usr/bin/clang++ -DShapes_EXPORTS -I\"/Users/conquerormikrokosmos/Downloads/LAPTOP MAC/IT/C++ PROJECT/shapeParser/Shapes/.\" -g -fsanitize=address -fno-omit-frame-pointer -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fPIC -o CMakeFiles/Shapes.dir/src/Shape.cpp.o -c \"/Users/conquerormikrokosmos/Downloads/LAPTOP MAC/IT/C++ PROJECT/shapeParser/Shapes/src/Shape.cpp\"",
+  "file": "/Users/conquerormikrokosmos/Downloads/LAPTOP MAC/IT/C++ PROJECT/shapeParser/Shapes/src/Shape.cpp",
+  "output": "CMakeFiles/Shapes.dir/src/Shape.cpp.o"
+},
+{
+  "directory": "/Users/conquerormikrokosmos/Downloads/LAPTOP MAC/IT/C++ PROJECT/shapeParser/Shapes/build",
+  "command": "/usr/bin/clang++ -DShapes_EXPORTS -I\"/Users/conquerormikrokosmos/Downloads/LAPTOP MAC/IT/C++ PROJECT/shapeParser/Shapes/.\" -g -fsanitize=address -fno-omit-frame-pointer -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fPIC -o CMakeFiles/Shapes.dir/src/ShapeDisplayer.cpp.o -c \"/Users/conquerormikrokosmos/Downloads/LAPTOP MAC/IT/C++ PROJECT/shapeParser/Shapes/src/ShapeDisplayer.cpp\"",
+  "file": "/Users/conquerormikrokosmos/Downloads/LAPTOP MAC/IT/C++ PROJECT/shapeParser/Shapes/src/ShapeDisplayer.cpp",
+  "output": "CMakeFiles/Shapes.dir/src/ShapeDisplayer.cpp.o"
+},
+{
+  "directory": "/Users/conquerormikrokosmos/Downloads/LAPTOP MAC/IT/C++ PROJECT/shapeParser/Shapes/build",
+  "command": "/usr/bin/clang++ -DShapes_EXPORTS -I\"/Users/conquerormikrokosmos/Downloads/LAPTOP MAC/IT/C++ PROJECT/shapeParser/Shapes/.\" -g -fsanitize=address -fno-omit-frame-pointer -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fPIC -o CMakeFiles/Shapes.dir/src/ShapeFactory.cpp.o -c \"/Users/conquerormikrokosmos/Downloads/LAPTOP MAC/IT/C++ PROJECT/shapeParser/Shapes/src/ShapeFactory.cpp\"",
+  "file": "/Users/conquerormikrokosmos/Downloads/LAPTOP MAC/IT/C++ PROJECT/shapeParser/Shapes/src/ShapeFactory.cpp",
+  "output": "CMakeFiles/Shapes.dir/src/ShapeFactory.cpp.o"
+},
+{
+  "directory": "/Users/conquerormikrokosmos/Downloads/LAPTOP MAC/IT/C++ PROJECT/shapeParser/Shapes/build",
+  "command": "/usr/bin/clang++ -DShapes_EXPORTS -I\"/Users/conquerormikrokosmos/Downloads/LAPTOP MAC/IT/C++ PROJECT/shapeParser/Shapes/.\" -g -fsanitize=address -fno-omit-frame-pointer -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fPIC -o CMakeFiles/Shapes.dir/src/ShapesTextProvider.cpp.o -c \"/Users/conquerormikrokosmos/Downloads/LAPTOP MAC/IT/C++ PROJECT/shapeParser/Shapes/src/ShapesTextProvider.cpp\"",
+  "file": "/Users/conquerormikrokosmos/Downloads/LAPTOP MAC/IT/C++ PROJECT/shapeParser/Shapes/src/ShapesTextProvider.cpp",
+  "output": "CMakeFiles/Shapes.dir/src/ShapesTextProvider.cpp.o"
+},
+{
+  "directory": "/Users/conquerormikrokosmos/Downloads/LAPTOP MAC/IT/C++ PROJECT/shapeParser/Shapes/build",
+  "command": "/usr/bin/clang++ -DShapes_EXPORTS -I\"/Users/conquerormikrokosmos/Downloads/LAPTOP MAC/IT/C++ PROJECT/shapeParser/Shapes/.\" -g -fsanitize=address -fno-omit-frame-pointer -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fPIC -o CMakeFiles/Shapes.dir/src/ShapesSortingPerformer.cpp.o -c \"/Users/conquerormikrokosmos/Downloads/LAPTOP MAC/IT/C++ PROJECT/shapeParser/Shapes/src/ShapesSortingPerformer.cpp\"",
+  "file": "/Users/conquerormikrokosmos/Downloads/LAPTOP MAC/IT/C++ PROJECT/shapeParser/Shapes/src/ShapesSortingPerformer.cpp",
+  "output": "CMakeFiles/Shapes.dir/src/ShapesSortingPerformer.cpp.o"
+},
+{
+  "directory": "/Users/conquerormikrokosmos/Downloads/LAPTOP MAC/IT/C++ PROJECT/shapeParser/Shapes/build",
+  "command": "/usr/bin/clang++ -DShapes_EXPORTS -I\"/Users/conquerormikrokosmos/Downloads/LAPTOP MAC/IT/C++ PROJECT/shapeParser/Shapes/.\" -g -fsanitize=address -fno-omit-frame-pointer -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fPIC -o CMakeFiles/Shapes.dir/src/ShapesDisplayer.cpp.o -c \"/Users/conquerormikrokosmos/Downloads/LAPTOP MAC/IT/C++ PROJECT/shapeParser/Shapes/src/ShapesDisplayer.cpp\"",
+  "file": "/Users/conquerormikrokosmos/Downloads/LAPTOP MAC/IT/C++ PROJECT/shapeParser/Shapes/src/ShapesDisplayer.cpp",
+  "output": "CMakeFiles/Shapes.dir/src/ShapesDisplayer.cpp.o"
+}
+]

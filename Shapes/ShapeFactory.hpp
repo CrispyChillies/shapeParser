@@ -5,17 +5,7 @@
 #include "Shape.hpp"
 
 using namespace std;
-
-class ShapeFactory
-{
-public:
-    inline static int countProduct = 0;
-
-public:
-    virtual Shape *parse(string prompt) = 0;
-};
-
-class StringToShapeFactory : public ShapeFactory
+class StringToShapeFactory
 {
 public:
     /***
@@ -36,5 +26,5 @@ public:
     StringToShapeFactory &operator=(StringToShapeFactory &&) = delete;
 
 public:
-    Shape *parse(string prompt);
+    static Shape *parse(string prompt);
 };

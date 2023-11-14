@@ -5,31 +5,24 @@
 #include <string>
 #include <sstream>
 
-using namespace std;
+using std::cout, std::endl;
+using std::left, std::setw, std::internal;
+using std::string, std::stringstream;
 
 class ShapeDisplayer
 {
 public:
     /// @brief Get the display string
-    /// @param id is the id of the shape
     /// @param shapeName is the name of the shape
     /// @param perimeter is the perimeter of the shape
     /// @param area is the area of the shape
     /// @return the display string
-    inline string getDisplayString(int id, string shapeName, float perimeter, float area)
-    {
-        stringstream builder;
-
-        builder << "| " << id << " | " << shapeName << " | Perimeter=" << perimeter << " | Area=" << area << " |";
-
-        return builder.str();
-    }
+    string getDisplayString(string shapeName, float perimeter, float area);
 
     /// @brief (Pure Virtual) Display the shape
-    /// @param id is the id of the shape
     /// @param perimeter is the perimeter of the shape
     /// @param area is the area of the shape
-    virtual void display(int id, float perimeter, float area) = 0;
+    virtual void display(float perimeter, float area) = 0;
 };
 
 class SquareDisplayer : public ShapeDisplayer
@@ -56,19 +49,14 @@ public:
 
 public:
     /// @brief Display the square
-    /// @param id is the id of the square
     /// @param perimeter is the perimeter of the square
     /// @param area is the area of the square
-    inline void display(int id, float perimeter, float area)
-    {
-        string displayString = getDisplayString(id, "Square", perimeter, area);
-        cout << displayString << endl;
-    }
+    void display(float perimeter, float area);
 };
 
 class CircleDisplayer : public ShapeDisplayer
 {
-    public:
+public:
     /***
      * Singleton
      */
@@ -90,46 +78,36 @@ class CircleDisplayer : public ShapeDisplayer
 
 public:
     /// @brief Display the square
-    /// @param id is the id of the square
     /// @param perimeter is the perimeter of the square
     /// @param area is the area of the square
-    inline void display(int id, float perimeter, float area)
-    {
-        string displayString = getDisplayString(id, "Circle", perimeter, area);
-        cout << displayString << endl;
-    }
+    void display(float perimeter, float area);
 };
 
-class RectDisplayer : public ShapeDisplayer
+class RectangleDisplayer : public ShapeDisplayer
 {
-     public:
+public:
     /***
      * Singleton
      */
 
-    RectDisplayer() = default;
+    RectangleDisplayer() = default;
 
-    /// @brief Get the instance of the Rect displayer
-    /// @return the instance of the Rect displayer
-    static RectDisplayer &getInstance()
+    /// @brief Get the instance of the Rectangle displayer
+    /// @return the instance of the Rectangle displayer
+    static RectangleDisplayer &getInstance()
     {
-        static RectDisplayer instance;
+        static RectangleDisplayer instance;
         return instance;
     }
 
-    RectDisplayer(const RectDisplayer &) = delete;
-    RectDisplayer(RectDisplayer &&) = delete;
-    RectDisplayer &operator=(const RectDisplayer &) = delete;
-    RectDisplayer &operator=(RectDisplayer &&) = delete;
+    RectangleDisplayer(const RectangleDisplayer &) = delete;
+    RectangleDisplayer(RectangleDisplayer &&) = delete;
+    RectangleDisplayer &operator=(const RectangleDisplayer &) = delete;
+    RectangleDisplayer &operator=(RectangleDisplayer &&) = delete;
 
 public:
     /// @brief Display the square
-    /// @param id is the id of the square
     /// @param perimeter is the perimeter of the square
     /// @param area is the area of the square
-    inline void display(int id, float perimeter, float area)
-    {
-        string displayString = getDisplayString(id, "Rectangle", perimeter, area);
-        cout << displayString << endl;
-    }
+    void display(float perimeter, float area);
 };
