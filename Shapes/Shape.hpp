@@ -36,7 +36,6 @@ public:
 
 public:
     void setDisplayer();
-    void display();
 
 public:
     static Square *parse(string prompt);
@@ -53,7 +52,6 @@ public:
 
 public:
     void setDisplayer();
-    void display();
 
 public:
     static Circle *parse(string prompt);
@@ -71,7 +69,6 @@ public:
 
 public:
     void setDisplayer();
-    void display();
 
 public:
     static Rectangle *parse(string prompt);
