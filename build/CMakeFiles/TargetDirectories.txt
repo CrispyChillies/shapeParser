@@ -1,0 +1,3 @@
+/Users/conquerormikrokosmos/Downloads/LAPTOP MAC/IT/C++ PROJECT/shapeParser/build/CMakeFiles/ShapeParser.dir
+/Users/conquerormikrokosmos/Downloads/LAPTOP MAC/IT/C++ PROJECT/shapeParser/build/CMakeFiles/edit_cache.dir
+/Users/conquerormikrokosmos/Downloads/LAPTOP MAC/IT/C++ PROJECT/shapeParser/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/Users/conquerormikrokosmos/Downloads/LAPTOP MAC/IT/C++ PROJECT/shapeParser/build",
+  "command": "/usr/bin/clang++  -isystem \"/Users/conquerormikrokosmos/Downloads/LAPTOP MAC/IT/C++ PROJECT/shapeParser/Shapes\"  -fsanitize=address -fno-omit-frame-pointer -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -o CMakeFiles/ShapeParser.dir/main.cpp.o -c \"/Users/conquerormikrokosmos/Downloads/LAPTOP MAC/IT/C++ PROJECT/shapeParser/main.cpp\"",
+  "file": "/Users/conquerormikrokosmos/Downloads/LAPTOP MAC/IT/C++ PROJECT/shapeParser/main.cpp",
+  "output": "CMakeFiles/ShapeParser.dir/main.cpp.o"
+}
+]
