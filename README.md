@@ -28,6 +28,9 @@ You just need to open VSCode and move to the Shapes folder as usual. Notice that
 #### Step 2: Compile the source code of the library into a dynamic library that is compatible with your system
 You need to compile the source code inside the src subfolder of the Shapes folder into a dynamic library. Then, you need to place the dynamic library outside of the build folder and still inside the Shapes folder as I've already set up the main project to link appropriately with the dynamic library in this way.
 
+<iframe width="560" height="315" src="https://youtu.be/IfQ4c-jTUQQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 #### Step 3: Run the project using CMake
 - Move to the shapeParser folder
 - Click the ```Build``` button and click ▶ next to it to run the project
