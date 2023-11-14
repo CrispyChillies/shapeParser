@@ -9,11 +9,17 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(${PROJECT_NAME} main.cpp)
 
+if(WIN32)
+    set(LIB_EXTENSION "dll")
+elseif(APPLE)
+    set(LIB_EXTENSION "dylib")
+endif()
+
 # Add Shapes library
 add_library(Shapes SHARED IMPORTED)
 
 set_target_properties(Shapes PROPERTIES
-        IMPORTED_LOCATION "${CMAKE_CURRENT_LIST_DIR}/Shapes/libShapes.dylib"
+        IMPORTED_LOCATION "${CMAKE_CURRENT_LIST_DIR}/Shapes/libShapes.${LIB_EXTENSION}"
         INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_LIST_DIR}/Shapes"
         )
 
