@@ -1,0 +1,87 @@
+\doxysection{Shape.\+hpp}
+\hypertarget{_shape_8hpp_source}{}\label{_shape_8hpp_source}\mbox{\hyperlink{_shape_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_shape_displayer_8hpp}{ShapeDisplayer.hpp}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{_shape_8hpp_aa08a577393243b86dfd2a97e61443673}{PI}}\ =\ 3.14;}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_shape}{Shape}}}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_shape_aab2df52248616c11e10e9967c6c0da96}{\_perimeter}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ perimeter\ of\ the\ shape}}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_shape_a3a4d9760c652ca6821598a2bc0762cb3}{\_area}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ area\ of\ the\ shape}}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{class_shape_displayer}{ShapeDisplayer}}\ *\mbox{\hyperlink{class_shape_a549ef443a229aebd2dff3642fd9ff0e9}{\_shapeDisplayer}};\ \textcolor{comment}{//\ The\ displayer\ of\ the\ shape}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_shape_a5218b26c1c51f52bbf692de9bda532b3}{calcPerimeter}}()\ =\ 0;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_shape_a411b9607fec7d7c9cff9dd507461ff91}{calcArea}}()\ =\ 0;}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_shape_af47af4c0299303775e0775f7fafa6619}{getPerimeter}}();}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_shape_abae4bdc01283a663c82e9596395ce101}{getArea}}();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shape_a2a4f16ede6c5286e404343fb01d81efc}{setDisplayer}}()\ =\ 0;}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shape_a2c89cbe97e6097a12f40921596eaee38}{display}}();}
+\DoxyCodeLine{00030\ \};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_square}{Square}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_shape}{Shape}}}
+\DoxyCodeLine{00033\ \{}
+\DoxyCodeLine{00034\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{float}\ \_edge;}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{class_square_aab7445bdd04a8bbf26edccc830f1dffc}{Square}}(\textcolor{keywordtype}{int}\ edge);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_square_a45dfe22d27072ff85c3f820f82e6f962}{calcPerimeter}}();}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_square_ab0e5b673fea30e4e55eac08277492ed3}{calcArea}}();}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_square_a75e3407adde76a8eaa8534ca86c70b87}{setDisplayer}}();}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_square}{Square}}\ *\mbox{\hyperlink{class_square_a5d55948c4c103765843531253827b443}{parse}}(\textcolor{keywordtype}{string}\ prompt);}
+\DoxyCodeLine{00074\ \};}
+\DoxyCodeLine{00075\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_circle}{Circle}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_shape}{Shape}}}
+\DoxyCodeLine{00076\ \{}
+\DoxyCodeLine{00077\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{float}\ \_radius;}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00086\ \ \ \ \ \mbox{\hyperlink{class_circle_a1b2864b954ac641bff2537d6d3652c7f}{Circle}}(\textcolor{keywordtype}{int}\ radius);}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_circle_a66c2b31549ee69d6ceb0f0307b10338c}{calcPerimeter}}();}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_circle_ac6371a76515ebe154c21e91451b94495}{calcArea}}();}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_circle_a1e47b2c21f06593237d6ee9e4ca5cb7b}{setDisplayer}}();}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_circle}{Circle}}\ *\mbox{\hyperlink{class_circle_a07b21863ccc56eba6823e257a5fa1b21}{parse}}(\textcolor{keywordtype}{string}\ prompt);}
+\DoxyCodeLine{00117\ \};}
+\DoxyCodeLine{00118\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_rectangle}{Rectangle}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_shape}{Shape}}}
+\DoxyCodeLine{00119\ \{}
+\DoxyCodeLine{00120\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{float}\ \_height;}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{float}\ \_width;}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00131\ \ \ \ \ \mbox{\hyperlink{class_rectangle_af8c68a85b424da648e392ed57d02439e}{Rectangle}}(\textcolor{keywordtype}{float}\ height,\ \textcolor{keywordtype}{float}\ width);}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_rectangle_af05d6953de499eb5f7cb320d1923e71a}{calcPerimeter}}();}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_rectangle_a33b7f42f70349997fbe3b7e4db5f7e12}{calcArea}}();}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rectangle_a0db6a828de003e3ca6e2029e1efd6b83}{setDisplayer}}();}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_rectangle}{Rectangle}}\ *\mbox{\hyperlink{class_rectangle_aaf4ac938479fcfa13eae4a19a6893857}{parse}}(\textcolor{keywordtype}{string}\ prompt);}
+\DoxyCodeLine{00162\ \};}
+
+\end{DoxyCode}

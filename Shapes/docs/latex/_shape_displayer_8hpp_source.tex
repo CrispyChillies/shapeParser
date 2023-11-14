@@ -1,0 +1,95 @@
+\doxysection{Shape\+Displayer.\+hpp}
+\hypertarget{_shape_displayer_8hpp_source}{}\label{_shape_displayer_8hpp_source}\mbox{\hyperlink{_shape_displayer_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <iomanip>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{using\ }std::cout,\ std::endl;}
+\DoxyCodeLine{00009\ \textcolor{keyword}{using\ }std::left,\ std::setw,\ std::internal;}
+\DoxyCodeLine{00010\ \textcolor{keyword}{using\ }std::string,\ std::stringstream;}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_shape_displayer}{ShapeDisplayer}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_shape_displayer_a58654bf5e20e6884456abb63eca927c6}{getDisplayString}}(\textcolor{keywordtype}{string}\ shapeName,\ \textcolor{keywordtype}{float}\ perimeter,\ \textcolor{keywordtype}{float}\ area);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shape_displayer_a65b8ee4bb9f9a031768b25d44d3c98dc}{display}}(\textcolor{keywordtype}{float}\ perimeter,\ \textcolor{keywordtype}{float}\ area)\ =\ 0;}
+\DoxyCodeLine{00029\ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_square_displayer}{SquareDisplayer}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_shape_displayer}{ShapeDisplayer}}}
+\DoxyCodeLine{00032\ \{}
+\DoxyCodeLine{00033\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ \ \ \ /***}}
+\DoxyCodeLine{00035\ \textcolor{comment}{\ \ \ \ \ *\ Singleton}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{class_square_displayer_af5909feb45fd07d2390f9d29aed4bd2e}{SquareDisplayer}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_square_displayer}{SquareDisplayer}}\ \&\mbox{\hyperlink{class_square_displayer_a129ca65a85e4765779f8936513c13071}{getInstance}}()}
+\DoxyCodeLine{00046\ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_square_displayer}{SquareDisplayer}}\ instance;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ instance;}
+\DoxyCodeLine{00049\ \ \ \ \ \}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{class_square_displayer_ad6c2bb2a0d14d08c731e8c9cbe924bfd}{SquareDisplayer}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_square_displayer}{SquareDisplayer}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{class_square_displayer_a66c68ed8411a1e196b4ad16a7e8ba40f}{SquareDisplayer}}(\mbox{\hyperlink{class_square_displayer}{SquareDisplayer}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{class_square_displayer}{SquareDisplayer}}\ \&\mbox{\hyperlink{class_square_displayer_ad8b580bd69606e6a1f52a7b613155a98}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_square_displayer}{SquareDisplayer}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{class_square_displayer}{SquareDisplayer}}\ \&\mbox{\hyperlink{class_square_displayer_aabe963caefd15ed2fdf6902464f0568d}{operator=}}(\mbox{\hyperlink{class_square_displayer}{SquareDisplayer}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_square_displayer_ab5c5c7ab95fb624308b2235b60c23a87}{display}}(\textcolor{keywordtype}{float}\ perimeter,\ \textcolor{keywordtype}{float}\ area);}
+\DoxyCodeLine{00064\ \};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_circle_displayer}{CircleDisplayer}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_shape_displayer}{ShapeDisplayer}}}
+\DoxyCodeLine{00067\ \{}
+\DoxyCodeLine{00068\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00069\ \textcolor{comment}{\ \ \ \ /***}}
+\DoxyCodeLine{00070\ \textcolor{comment}{\ \ \ \ \ *\ Singleton}}
+\DoxyCodeLine{00071\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \mbox{\hyperlink{class_circle_displayer_a8e7bbcad20d33028e4cd6f00b7c8f571}{CircleDisplayer}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_circle_displayer}{CircleDisplayer}}\ \&\mbox{\hyperlink{class_circle_displayer_acfda3c66d2f86d2da84e9920d72b419c}{getInstance}}()}
+\DoxyCodeLine{00081\ \ \ \ \ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_circle_displayer}{CircleDisplayer}}\ instance;}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ instance;}
+\DoxyCodeLine{00084\ \ \ \ \ \}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \mbox{\hyperlink{class_circle_displayer_a721fc0c3fe7c17f95dcdcbc088ebb3ac}{CircleDisplayer}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_circle_displayer}{CircleDisplayer}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00087\ \ \ \ \ \mbox{\hyperlink{class_circle_displayer_ab25c86f46065b93f5f5ab465b701fa6e}{CircleDisplayer}}(\mbox{\hyperlink{class_circle_displayer}{CircleDisplayer}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00088\ \ \ \ \ \mbox{\hyperlink{class_circle_displayer}{CircleDisplayer}}\ \&\mbox{\hyperlink{class_circle_displayer_a7d7804e7221e6a84872b561ac94e12fa}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_circle_displayer}{CircleDisplayer}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00089\ \ \ \ \ \mbox{\hyperlink{class_circle_displayer}{CircleDisplayer}}\ \&\mbox{\hyperlink{class_circle_displayer_a80567a8ba9025fbfca874d296c9b32ad}{operator=}}(\mbox{\hyperlink{class_circle_displayer}{CircleDisplayer}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_circle_displayer_a5f993335cbfd2dea8d1bb37a0ec20100}{display}}(\textcolor{keywordtype}{float}\ perimeter,\ \textcolor{keywordtype}{float}\ area);}
+\DoxyCodeLine{00099\ \};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_rectangle_displayer}{RectangleDisplayer}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_shape_displayer}{ShapeDisplayer}}}
+\DoxyCodeLine{00102\ \{}
+\DoxyCodeLine{00103\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00104\ \textcolor{comment}{\ \ \ \ /***}}
+\DoxyCodeLine{00105\ \textcolor{comment}{\ \ \ \ \ *\ Singleton}}
+\DoxyCodeLine{00106\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ \mbox{\hyperlink{class_rectangle_displayer_aab56a1b649b5e09fc640c04603943e33}{RectangleDisplayer}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_rectangle_displayer}{RectangleDisplayer}}\ \&\mbox{\hyperlink{class_rectangle_displayer_ab73ed8dc986ece0a810dcea0efd1d8e8}{getInstance}}()}
+\DoxyCodeLine{00116\ \ \ \ \ \{}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_rectangle_displayer}{RectangleDisplayer}}\ instance;}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ instance;}
+\DoxyCodeLine{00119\ \ \ \ \ \}}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \ \ \mbox{\hyperlink{class_rectangle_displayer_a9d2e480653d5a6c7cc31215763012c4e}{RectangleDisplayer}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_rectangle_displayer}{RectangleDisplayer}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00122\ \ \ \ \ \mbox{\hyperlink{class_rectangle_displayer_a8e93c0c22cc13258bf90dcd1496f93c8}{RectangleDisplayer}}(\mbox{\hyperlink{class_rectangle_displayer}{RectangleDisplayer}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00123\ \ \ \ \ \mbox{\hyperlink{class_rectangle_displayer}{RectangleDisplayer}}\ \&\mbox{\hyperlink{class_rectangle_displayer_a8a193aec6304f274ae64e94f5789c890}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_rectangle_displayer}{RectangleDisplayer}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00124\ \ \ \ \ \mbox{\hyperlink{class_rectangle_displayer}{RectangleDisplayer}}\ \&\mbox{\hyperlink{class_rectangle_displayer_a610d91cf0385e2ba4c0c798716206ae9}{operator=}}(\mbox{\hyperlink{class_rectangle_displayer}{RectangleDisplayer}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rectangle_displayer_a48059ec988b42aacbcb358195a1148b2}{display}}(\textcolor{keywordtype}{float}\ perimeter,\ \textcolor{keywordtype}{float}\ area);}
+\DoxyCodeLine{00134\ \};}
+
+\end{DoxyCode}

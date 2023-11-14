@@ -1,0 +1,137 @@
+\doxysection{Rectangle Class Reference}
+\hypertarget{class_rectangle}{}\label{class_rectangle}\index{Rectangle@{Rectangle}}
+
+
+{\ttfamily \#include $<$Shape.\+hpp$>$}
+
+Inheritance diagram for Rectangle\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_rectangle}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_rectangle_af8c68a85b424da648e392ed57d02439e}{Rectangle}} (float height, float width)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_rectangle}{Rectangle} object. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_rectangle_af05d6953de499eb5f7cb320d1923e71a}{calc\+Perimeter}} ()
+\begin{DoxyCompactList}\small\item\em Calculate the perimeter of the rectangle. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_rectangle_a33b7f42f70349997fbe3b7e4db5f7e12}{calc\+Area}} ()
+\item 
+void \mbox{\hyperlink{class_rectangle_a0db6a828de003e3ca6e2029e1efd6b83}{set\+Displayer}} ()
+\begin{DoxyCompactList}\small\item\em Set the Displayer object for the rectangle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_shape}{Shape}}}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_shape_af47af4c0299303775e0775f7fafa6619}{get\+Perimeter}} ()
+\item 
+float \mbox{\hyperlink{class_shape_abae4bdc01283a663c82e9596395ce101}{get\+Area}} ()
+\item 
+void \mbox{\hyperlink{class_shape_a2c89cbe97e6097a12f40921596eaee38}{display}} ()
+\begin{DoxyCompactList}\small\item\em Display the shape. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_rectangle}{Rectangle}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_rectangle_aaf4ac938479fcfa13eae4a19a6893857}{parse}} (string prompt)
+\begin{DoxyCompactList}\small\item\em Parse a string prompt into a \doxylink{class_rectangle}{Rectangle} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_shape}{Shape}}}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_shape_aab2df52248616c11e10e9967c6c0da96}{\+\_\+perimeter}}
+\item 
+float \mbox{\hyperlink{class_shape_a3a4d9760c652ca6821598a2bc0762cb3}{\+\_\+area}}
+\item 
+\mbox{\hyperlink{class_shape_displayer}{Shape\+Displayer}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_shape_a549ef443a229aebd2dff3642fd9ff0e9}{\+\_\+shape\+Displayer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_rectangle_af8c68a85b424da648e392ed57d02439e}\label{class_rectangle_af8c68a85b424da648e392ed57d02439e} 
+\index{Rectangle@{Rectangle}!Rectangle@{Rectangle}}
+\index{Rectangle@{Rectangle}!Rectangle@{Rectangle}}
+\doxysubsubsection{\texorpdfstring{Rectangle()}{Rectangle()}}
+{\footnotesize\ttfamily Rectangle\+::\+Rectangle (\begin{DoxyParamCaption}\item[{float}]{height,  }\item[{float}]{width }\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{class_rectangle}{Rectangle} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em height} & is the height of the rectangle \\
+\hline
+{\em width} & is the width of the rectangle \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_rectangle_a33b7f42f70349997fbe3b7e4db5f7e12}\label{class_rectangle_a33b7f42f70349997fbe3b7e4db5f7e12} 
+\index{Rectangle@{Rectangle}!calcArea@{calcArea}}
+\index{calcArea@{calcArea}!Rectangle@{Rectangle}}
+\doxysubsubsection{\texorpdfstring{calcArea()}{calcArea()}}
+{\footnotesize\ttfamily float Rectangle\+::calc\+Area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the area of the rectangle 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_shape_a411b9607fec7d7c9cff9dd507461ff91}{Shape}}.
+
+\Hypertarget{class_rectangle_af05d6953de499eb5f7cb320d1923e71a}\label{class_rectangle_af05d6953de499eb5f7cb320d1923e71a} 
+\index{Rectangle@{Rectangle}!calcPerimeter@{calcPerimeter}}
+\index{calcPerimeter@{calcPerimeter}!Rectangle@{Rectangle}}
+\doxysubsubsection{\texorpdfstring{calcPerimeter()}{calcPerimeter()}}
+{\footnotesize\ttfamily float Rectangle\+::calc\+Perimeter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Calculate the perimeter of the rectangle. 
+
+\begin{DoxyReturn}{Returns}
+the perimeter of the rectangle 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_shape_a5218b26c1c51f52bbf692de9bda532b3}{Shape}}.
+
+\Hypertarget{class_rectangle_aaf4ac938479fcfa13eae4a19a6893857}\label{class_rectangle_aaf4ac938479fcfa13eae4a19a6893857} 
+\index{Rectangle@{Rectangle}!parse@{parse}}
+\index{parse@{parse}!Rectangle@{Rectangle}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_rectangle}{Rectangle}} \texorpdfstring{$\ast$}{*} Rectangle\+::parse (\begin{DoxyParamCaption}\item[{string}]{prompt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Parse a string prompt into a \doxylink{class_rectangle}{Rectangle} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prompt} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Rectangle\texorpdfstring{$\ast$}{*} 
+\end{DoxyReturn}
+\Hypertarget{class_rectangle_a0db6a828de003e3ca6e2029e1efd6b83}\label{class_rectangle_a0db6a828de003e3ca6e2029e1efd6b83} 
+\index{Rectangle@{Rectangle}!setDisplayer@{setDisplayer}}
+\index{setDisplayer@{setDisplayer}!Rectangle@{Rectangle}}
+\doxysubsubsection{\texorpdfstring{setDisplayer()}{setDisplayer()}}
+{\footnotesize\ttfamily void Rectangle\+::set\+Displayer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Set the Displayer object for the rectangle. 
+
+
+
+Implements \mbox{\hyperlink{class_shape_a2a4f16ede6c5286e404343fb01d81efc}{Shape}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_shape_8hpp}{Shape.\+hpp}}\end{DoxyCompactItemize}

@@ -12,11 +12,14 @@ using std::string, std::stringstream;
 class ShapeDisplayer
 {
 public:
-    /// @brief Get the display string
-    /// @param shapeName is the name of the shape
-    /// @param perimeter is the perimeter of the shape
-    /// @param area is the area of the shape
-    /// @return the display string
+    /**
+     * @brief Get the Display String object
+     *
+     * @param shapeName is the name of the shape
+     * @param perimeter is the perimeter of the shape
+     * @param area is the area of the shape
+     * @return string
+     */
     string getDisplayString(string shapeName, float perimeter, float area);
 
     /// @brief (Pure Virtual) Display the shape
@@ -34,8 +37,11 @@ public:
 
     SquareDisplayer() = default;
 
-    /// @brief Get the instance of the square displayer
-    /// @return the instance of the square displayer
+    /**
+     * @brief Get the Instance object
+     *
+     * @return the instance of the square displayer
+     */
     static SquareDisplayer &getInstance()
     {
         static SquareDisplayer instance;
@@ -48,9 +54,12 @@ public:
     SquareDisplayer &operator=(SquareDisplayer &&) = delete;
 
 public:
-    /// @brief Display the square
-    /// @param perimeter is the perimeter of the square
-    /// @param area is the area of the square
+    /**
+     * @brief Display the square
+     *
+     * @param perimeter is the perimeter of the square
+     * @param area is the area of the square
+     */
     void display(float perimeter, float area);
 };
 
@@ -63,8 +72,11 @@ public:
 
     CircleDisplayer() = default;
 
-    /// @brief Get the instance of the Circle displayer
-    /// @return the instance of the Circle displayer
+    /**
+     * @brief Get the Instance object
+     *
+     * @return the instance of the Circle displayer
+     */
     static CircleDisplayer &getInstance()
     {
         static CircleDisplayer instance;
@@ -77,9 +89,12 @@ public:
     CircleDisplayer &operator=(CircleDisplayer &&) = delete;
 
 public:
-    /// @brief Display the square
-    /// @param perimeter is the perimeter of the square
-    /// @param area is the area of the square
+    /**
+     * @brief
+     *
+     * @param perimeter is the perimeter of the square
+     * @param area is the area of the square
+     */
     void display(float perimeter, float area);
 };
 
@@ -92,8 +107,11 @@ public:
 
     RectangleDisplayer() = default;
 
-    /// @brief Get the instance of the Rectangle displayer
-    /// @return the instance of the Rectangle displayer
+    /**
+     * @brief Get the Instance object
+     *
+     * @return the instance of the Rectangle displayer
+     */
     static RectangleDisplayer &getInstance()
     {
         static RectangleDisplayer instance;
@@ -106,8 +124,11 @@ public:
     RectangleDisplayer &operator=(RectangleDisplayer &&) = delete;
 
 public:
-    /// @brief Display the square
-    /// @param perimeter is the perimeter of the square
-    /// @param area is the area of the square
+    /**
+     * @brief Display the square
+     *
+     * @param perimeter is the perimeter of the square
+     * @param area is the area of the square
+     */
     void display(float perimeter, float area);
 };

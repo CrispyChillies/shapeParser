@@ -26,5 +26,11 @@ public:
     StringToShapeFactory &operator=(StringToShapeFactory &&) = delete;
 
 public:
+    /**
+     * @brief Parse the string to shape
+     *
+     * @param prompt
+     * @return the shape
+     */
     static Shape *parse(string prompt);
 };

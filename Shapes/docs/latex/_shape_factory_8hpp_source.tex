@@ -1,0 +1,35 @@
+\doxysection{Shape\+Factory.\+hpp}
+\hypertarget{_shape_factory_8hpp_source}{}\label{_shape_factory_8hpp_source}\mbox{\hyperlink{_shape_factory_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_shape_8hpp}{Shape.hpp}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_string_to_shape_factory}{StringToShapeFactory}}}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ \ \ \ /***}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ \ \ \ \ *\ Singleton}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_string_to_shape_factory_a2de2c3db227ca5637530983fbd85bfb7}{StringToShapeFactory}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_string_to_shape_factory}{StringToShapeFactory}}\ \&\mbox{\hyperlink{class_string_to_shape_factory_a2513c1a885b51d6f465e0de602599731}{getInstance}}()}
+\DoxyCodeLine{00018\ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_string_to_shape_factory}{StringToShapeFactory}}\ instance;}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ instance;}
+\DoxyCodeLine{00021\ \ \ \ \ \}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_string_to_shape_factory_ae32d0ecf5710b1f0ca7f19552e577141}{StringToShapeFactory}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_string_to_shape_factory}{StringToShapeFactory}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_string_to_shape_factory_a4418de0adadd7d8595b0f694e8872846}{StringToShapeFactory}}(\mbox{\hyperlink{class_string_to_shape_factory}{StringToShapeFactory}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_string_to_shape_factory}{StringToShapeFactory}}\ \&\mbox{\hyperlink{class_string_to_shape_factory_ac305cb89ce60643bc28d04dc7c69877d}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_string_to_shape_factory}{StringToShapeFactory}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_string_to_shape_factory}{StringToShapeFactory}}\ \&\mbox{\hyperlink{class_string_to_shape_factory_ad0e4880ade53829515c780b006fb03ff}{operator=}}(\mbox{\hyperlink{class_string_to_shape_factory}{StringToShapeFactory}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_shape}{Shape}}\ *\mbox{\hyperlink{class_string_to_shape_factory_a0c735e8d7518fb651703d1ca40657e62}{parse}}(\textcolor{keywordtype}{string}\ prompt);}
+\DoxyCodeLine{00036\ \};}
+
+\end{DoxyCode}

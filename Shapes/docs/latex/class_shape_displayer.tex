@@ -1,0 +1,70 @@
+\doxysection{Shape\+Displayer Class Reference}
+\hypertarget{class_shape_displayer}{}\label{class_shape_displayer}\index{ShapeDisplayer@{ShapeDisplayer}}
+
+
+{\ttfamily \#include $<$Shape\+Displayer.\+hpp$>$}
+
+Inheritance diagram for Shape\+Displayer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_shape_displayer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_shape_displayer_a58654bf5e20e6884456abb63eca927c6}{get\+Display\+String}} (string shape\+Name, float perimeter, float area)
+\begin{DoxyCompactList}\small\item\em Get the Display String object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_shape_displayer_a65b8ee4bb9f9a031768b25d44d3c98dc}{display}} (float perimeter, float area)=0
+\begin{DoxyCompactList}\small\item\em (Pure Virtual) Display the shape \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_shape_displayer_a65b8ee4bb9f9a031768b25d44d3c98dc}\label{class_shape_displayer_a65b8ee4bb9f9a031768b25d44d3c98dc} 
+\index{ShapeDisplayer@{ShapeDisplayer}!display@{display}}
+\index{display@{display}!ShapeDisplayer@{ShapeDisplayer}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily virtual void Shape\+Displayer\+::display (\begin{DoxyParamCaption}\item[{float}]{perimeter,  }\item[{float}]{area }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+(Pure Virtual) Display the shape 
+
+
+\begin{DoxyParams}{Parameters}
+{\em perimeter} & is the perimeter of the shape \\
+\hline
+{\em area} & is the area of the shape \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_square_displayer_ab5c5c7ab95fb624308b2235b60c23a87}{Square\+Displayer}}, \mbox{\hyperlink{class_circle_displayer_a5f993335cbfd2dea8d1bb37a0ec20100}{Circle\+Displayer}}, and \mbox{\hyperlink{class_rectangle_displayer_a48059ec988b42aacbcb358195a1148b2}{Rectangle\+Displayer}}.
+
+\Hypertarget{class_shape_displayer_a58654bf5e20e6884456abb63eca927c6}\label{class_shape_displayer_a58654bf5e20e6884456abb63eca927c6} 
+\index{ShapeDisplayer@{ShapeDisplayer}!getDisplayString@{getDisplayString}}
+\index{getDisplayString@{getDisplayString}!ShapeDisplayer@{ShapeDisplayer}}
+\doxysubsubsection{\texorpdfstring{getDisplayString()}{getDisplayString()}}
+{\footnotesize\ttfamily string Shape\+Displayer\+::get\+Display\+String (\begin{DoxyParamCaption}\item[{string}]{shape\+Name,  }\item[{float}]{perimeter,  }\item[{float}]{area }\end{DoxyParamCaption})}
+
+
+
+Get the Display String object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shape\+Name} & is the name of the shape \\
+\hline
+{\em perimeter} & is the perimeter of the shape \\
+\hline
+{\em area} & is the area of the shape \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_shape_displayer_8hpp}{Shape\+Displayer.\+hpp}}\end{DoxyCompactItemize}
