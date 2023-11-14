@@ -6,7 +6,7 @@ CXX_DEFINES = -DShapes_EXPORTS
 
 CXX_INCLUDES = -I"/Users/conquerormikrokosmos/Downloads/LAPTOP MAC/IT/C++ PROJECT/shapeParser/Shapes/."
 
-CXX_FLAGSarm64 =  -fsanitize=address -fno-omit-frame-pointer -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fPIC
+CXX_FLAGSarm64 = -g -fsanitize=address -fno-omit-frame-pointer -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fPIC
 
-CXX_FLAGS =  -fsanitize=address -fno-omit-frame-pointer -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fPIC
+CXX_FLAGS = -g -fsanitize=address -fno-omit-frame-pointer -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fPIC
 
